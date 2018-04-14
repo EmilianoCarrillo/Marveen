@@ -7,9 +7,35 @@
 	position: absolute;
 }
 
+#Logo{
+	display: block;
+	 margin-left: auto;
+	 margin-right: auto;
+	 width: 20%;
+}
+
+section#banner{
+	padding-top: 150px;
+	padding-bottom: 90px;
+}
 
 
 
+#two{
+	background-color: white;
+}
+
+#one{
+	background-color: #f6f6f6;
+}
+
+#pizza{
+	font-size: 2em;
+}
+
+#BBVA{
+	margin-bottom: 0;
+}
 
 
 
