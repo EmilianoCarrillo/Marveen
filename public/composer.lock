@@ -1,0 +1,61 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "563a8020417075e3ecd335624c788c17",
+    "packages": [
+        {
+            "name": "monkeylearn/monkeylearn-php",
+            "version": "0.3.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/monkeylearn/monkeylearn-php.git",
+                "reference": "4329ec9fb02e58be16845342282e470915f9e1c8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/monkeylearn/monkeylearn-php/zipball/4329ec9fb02e58be16845342282e470915f9e1c8",
+                "reference": "4329ec9fb02e58be16845342282e470915f9e1c8",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "MonkeyLearn\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "MonkeyLearn",
+                    "email": "hello@monkeylearn.com",
+                    "homepage": "http://monkeylearn.com"
+                }
+            ],
+            "description": "Official PHP client for the MonkeyLearn API.",
+            "homepage": "http://monkeylearn.com",
+            "keywords": [
+                "machine learning",
+                "monkeylearn",
+                "php"
+            ],
+            "time": "2017-12-08T18:52:58+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}
