@@ -14,85 +14,85 @@
 	</head>
 	<body class="landing">
 		<?php
-	require_once('TwitterAPIExchange.php');
-	require('vendor/autoload.php');
-	$settings = array(
-    'oauth_access_token' => "860092922657619969-O75q6QXhZZUcIygfEMHFa2E5zd2IGSP",
-    'oauth_access_token_secret' => "e7BqhLAmxzl2fek9KYeNzpKpPkAOOt7uXURlcwP4cGiGe",
-    'consumer_key' => "HhHKXbCf940bmiJyIABPfQnmc",
-    'consumer_secret' => "ptbPNPWJgMg9SmvTxsTsbeRyC8DqKIHL1g3NGqs5WTGsXRM5OU"
-	);
-	$url = 'https://api.twitter.com/1.1/search/tweets.json';
-	$getfield = '?q=Esposa Embarazada';
-	$requestMethod = 'GET';
+			require_once('TwitterAPIExchange.php');
+			require('vendor/autoload.php');
+			$settings = array(
+		    'oauth_access_token' => "860092922657619969-O75q6QXhZZUcIygfEMHFa2E5zd2IGSP",
+		    'oauth_access_token_secret' => "e7BqhLAmxzl2fek9KYeNzpKpPkAOOt7uXURlcwP4cGiGe",
+		    'consumer_key' => "HhHKXbCf940bmiJyIABPfQnmc",
+		    'consumer_secret' => "ptbPNPWJgMg9SmvTxsTsbeRyC8DqKIHL1g3NGqs5WTGsXRM5OU"
+			);
+			$url = 'https://api.twitter.com/1.1/search/tweets.json';
+			$getfield = '?q=Esposa Embarazada';
+			$requestMethod = 'GET';
 
-	$twitter = new TwitterAPIExchange($settings);
-	$response = $twitter->setGetfield($getfield)
-	    ->buildOauth($url, $requestMethod)
-	    ->performRequest();
-	$string = json_decode($response,$assoc = TRUE);
-	/*echo "<pre>";
-	print_r($string);
-	echo "</pre>";*/
-	$ml = new MonkeyLearn\Client('f236e4aa52b79a80060ebebcdb39be039e19dc21');
-	$mat;
-	$tam=0;
-	$key=array(
-		"No cliente"=>"N",
-		"Cliente"=>"S",
-		"Mal servicio al cliente"=>"M",
-		"Delincuencia"=>"D",
-		"Transacciones"=>"T",
-	);
-	foreach($string as $items)
-    {
-    	foreach($items as $pos)
-    	{
-	        /*echo "Time and Date of Tweet: ".$pos['created_at']."<br />";
-	        echo "Tweet: ". $pos['text']."<br />";
-	        echo "Tweeted by: ". $pos['user']['name']."<br />";
-	        echo "Screen name: ". $pos['user']['screen_name']."<br />";
-	        echo "Location: ". $pos['user']['location']."<br />";¨*/
-	        $text_list = [$pos['text']];
-			$module_id = 'cl_iyn2vbwe';
-			$res = $ml->classifiers->classify($module_id, $text_list, true);
-			$mat[$tam]= array($pos['user']['screen_name'],$pos['text'],$pos['user']['location'],$key[$res->result['0']['0']['label']]);
-			/*echo $pos['user']['screen_name']." ".$pos['text']." ".$pos['user']['location']." ".$key[$res->result['0']['0']['label']]."<br>";*/
-			$tam++;
-    	}
-    	break;
-    }
-   	$getfield = '?q=#Bancomer';
-	$requestMethod = 'GET';
+			$twitter = new TwitterAPIExchange($settings);
+			$response = $twitter->setGetfield($getfield)
+			    ->buildOauth($url, $requestMethod)
+			    ->performRequest();
+			$string = json_decode($response,$assoc = TRUE);
+			/*echo "<pre>";
+			print_r($string);
+			echo "</pre>";*/
+			$ml = new MonkeyLearn\Client('f236e4aa52b79a80060ebebcdb39be039e19dc21');
+			$mat;
+			$tam=0;
+			$key=array(
+				"No cliente"=>"N",
+				"Cliente"=>"S",
+				"Mal servicio al cliente"=>"M",
+				"Delincuencia"=>"D",
+				"Transacciones"=>"T",
+			);
+			foreach($string as $items)
+		    {
+			    	foreach($items as $pos)
+			    	{
+				        /*echo "Time and Date of Tweet: ".$pos['created_at']."<br />";
+				        echo "Tweet: ". $pos['text']."<br />";
+				        echo "Tweeted by: ". $pos['user']['name']."<br />";
+				        echo "Screen name: ". $pos['user']['screen_name']."<br />";
+				        echo "Location: ". $pos['user']['location']."<br />";¨*/
+				        $text_list = [$pos['text']];
+								$module_id = 'cl_iyn2vbwe';
+								$res = $ml->classifiers->classify($module_id, $text_list, true);
+								$mat[$tam]= array($pos['user']['screen_name'],$pos['text'],$pos['user']['location'],$key[$res->result['0']['0']['label']]);
+								/*echo $pos['user']['screen_name']." ".$pos['text']." ".$pos['user']['location']." ".$key[$res->result['0']['0']['label']]."<br>";*/
+								$tam++;
+			    	}
+		    		break;
+		    }
+		   	$getfield = '?q=#Bancomer';
+			$requestMethod = 'GET';
 
-	$response = $twitter->setGetfield($getfield)
-	    ->buildOauth($url, $requestMethod)
-	    ->performRequest();
-	$string = json_decode($response,$assoc = TRUE);
-	/*echo "<pre>";
-	print_r($string);
-	echo "</pre>";*/
-	$m2 = new MonkeyLearn\Client('6690ba1c2b26279c0fa7f5c6c6a3ee2b5f1c2bc1');
-	foreach($string as $items)
-    {
-    	foreach($items as $pos)
-    	{
-	        /*echo "Time and Date of Tweet: ".$pos['created_at']."<br />";
-	        echo "Tweet: ". $pos['text']."<br />";
-	        echo "Tweeted by: ". $pos['user']['name']."<br />";
-	        echo "Screen name: ". $pos['user']['screen_name']."<br />";
-	        echo "Location: ". $pos['user']['location']."<br />";*/
-	        $text_list = [$pos['text']];
-			$module_id = 'cl_kWHXGtmf';
-			$res = $m2->classifiers->classify($module_id, $text_list, true);
-			$mat[$tam]=array($pos['user']['screen_name'],$pos['text'],$pos['user']['location'],$key[$res->result['0']['0']['label']]);
-			/*echo "<br>";
-			echo $pos['user']['screen_name']." ".$pos['text']." ".$pos['user']['location']." ".$key[$res->result['0']['0']['label']]."<br>";*/
-			$tam++
-    	}
-    	break;
-    }
-?>
+			$response = $twitter->setGetfield($getfield)
+			    ->buildOauth($url, $requestMethod)
+			    ->performRequest();
+			$string = json_decode($response,$assoc = TRUE);
+			/*echo "<pre>";
+			print_r($string);
+			echo "</pre>";*/
+			$m2 = new MonkeyLearn\Client('6690ba1c2b26279c0fa7f5c6c6a3ee2b5f1c2bc1');
+			foreach($string as $items)
+		    {
+			    	foreach($items as $pos)
+			    	{
+						        /*echo "Time and Date of Tweet: ".$pos['created_at']."<br />";
+						        echo "Tweet: ". $pos['text']."<br />";
+						        echo "Tweeted by: ". $pos['user']['name']."<br />";
+						        echo "Screen name: ". $pos['user']['screen_name']."<br />";
+						        echo "Location: ". $pos['user']['location']."<br />";*/
+						        $text_list = [$pos['text']];
+										$module_id = 'cl_kWHXGtmf';
+										$res = $m2->classifiers->classify($module_id, $text_list, true);
+										$mat[$tam]=array($pos['user']['screen_name'],$pos['text'],$pos['user']['location'],$key[$res->result['0']['0']['label']]);
+										/*echo "<br>";
+										echo $pos['user']['screen_name']." ".$pos['text']." ".$pos['user']['location']." ".$key[$res->result['0']['0']['label']]."<br>";*/
+										$tam++
+			    	}
+		    	break;
+		    }
+		?>
 		<!-- Header -->
 			<header id="header" class="alt">
 				<h1><strong><a href="index.html">Desarrollada con ♥️ por <br/></a></strong><span id="TTM">The Turing Machines</span></h1>
