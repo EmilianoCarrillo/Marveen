@@ -1,16 +1,12 @@
 <!DOCTYPE HTML>
-<!--
-	Spatial by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
--->
 <html>
-<<<<<<< HEAD
 	<head>
 		<title>Marveen</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/logo1.png" />
 	</head>
 	<body class="landing">
 		<?php
@@ -98,9 +94,9 @@
 				<h1><strong><a href="index.html">Desarrollada con ♥️ por <br/></a></strong><span id="TTM">The Turing Machines</span></h1>
 				<nav id="nav">
 					<ul>
-						<li><a href="index.html">Mapa de Calor</a></li>
-						<li><a href="generic.html">Gráficas</a></li>
-						<li><a href="elements.html">Tabla de datos</a></li>
+						<li><a href="#one">Qué es Marveen</a></li>
+						<li><a href="#two">Gráficos</a></li>
+						<li><a href="#footer">Contacto</a></li>
 					</ul>
 				</nav>
 			</header>
@@ -109,8 +105,9 @@
 
 		<!-- Banner -->
 			<section id="banner">
+        <img src="images/logo1.png" alt="logo" id="Logo">
 				<h2>Marveen</h2>
-				<p>Una aplicación web que utiliza Machine Learning <br />  para analizar datos dentro de twitter e identid¡ficar posibles clientes. </p>
+				<p>Maximiza la influencia de tu empresa bancaria en las redes sociales.</p>
 				<ul class="actions">
 					<li><a href="#" class="button special big">VER VIDEO</a></li>
 				</ul>
@@ -122,13 +119,13 @@
 						<div class="row 200%">
 							<div class="6u 12u$(medium)">
 								<header class="major">
-									<h2>Maecenas luctus lectus</h2>
-									<p>Perspiciatis doloremque recusandae dolor</p>
+									<h2>Machine learning para el análisis de tu empresa.</h2>
+
 								</header>
 							</div>
 							<div class="6u$ 12u$(medium)">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non ea mollitia corporis id, distinctio sunt veritatis officiis dolore reprehenderit deleniti voluptatibus harum magna, doloremque alias quisquam minus, eaque. Feugiat quod, nesciunt! Iste quos ipsam, iusto sit esse.</p>
-								<p>Dolorum aspernatur maxime libero ratione quidem distinctio, placeat fugiat laborum voluptatum enim neque soluta vel sunt id ex veritatis. Labore rerum, odit sapiente, alias mollitia magnam exercitationem modi amet earum quia atque ipsum voluptas asperiores quas laboriosam.</p>
+								<p>Marveen es una aplicación web que te permite encontrar demandas realizadas por tus clientes a través de twitter de manera fácil y rápida siendo asistido por un algoritmo de Machine Learning para hacer más efectivo el filtrado de datos y la solución de sus problemas.</p>
+								<p>Además, identifica y contacta con posibles candidatos a clientes que cuenten con necesidades de obtener préstamos personales, como recientes embarazos, para ofertarles tus servicios.</p>
 							</div>
 						</div>
 					</div>
@@ -138,102 +135,81 @@
 				<section id="two" class="wrapper style2 special">
 					<div class="container">
 						<header class="major">
-							<h2>Fusce ultrices fringilla</h2>
-							<p>Maecenas vitae tellus feugiat eleifend</p>
+							<h2>Mapa de Calor</h2>
+							<p>Encuentra los lugares con mayor actividad</p>
 						</header>
-						<div class="row 150%">
-							<div class="6u 12u$(xsmall)">
-								<div class="image fit captioned">
-									<img src="images/pic02.jpg" alt="" />
-									<h3>Lorem ipsum dolor sit amet.</h3>
-								</div>
-							</div>
-							<div class="6u$ 12u$(xsmall)">
-								<div class="image fit captioned">
-									<img src="images/pic03.jpg" alt="" />
-									<h3>Illum, maiores tempora cupid?</h3>
-								</div>
-							</div>
-						</div>
-						<ul class="actions">
-							<li><a href="#" class="button special big">Nulla luctus</a></li>
-							<li><a href="#" class="button big">Sed vulputate</a></li>
-						</ul>
+              <div id="map"></div>
+              <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAE-QydAvrtD9OwHVDkQDARf8WoUxOG9OY&libraries=visualization&callback=initMap" async defer></script>
+
+
+<table class="container" class = "tablitas">
+	<thead>
+		<tr>
+			<th><h1>Usuario</h1></th>
+			<th><h1>Categoría</h1></th>
+			<th><h1>Ubicación</h1></th>
+			<th><h1>Texto</h1></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Google</td>
+			<td>9518</td>
+			<td>6369</td>
+			<td>01:32:50</td>
+		</tr>
+		<tr>
+			<td>Twitter</td>
+			<td>7326</td>
+			<td>10437</td>
+			<td>00:51:22</td>
+		</tr>
+		<tr>
+			<td>Amazon</td>
+			<td>4162</td>
+			<td>5327</td>
+			<td>00:24:34</td>
+		</tr>
+    <tr>
+			<td>LinkedIn</td>
+			<td>3654</td>
+			<td>2961</td>
+			<td>00:12:10</td>
+		</tr>
+    <tr>
+			<td>CodePen</td>
+			<td>2002</td>
+			<td>4135</td>
+			<td>00:46:19</td>
+		</tr>
+    <tr>
+			<td>GitHub</td>
+			<td>4623</td>
+			<td>3486</td>
+			<td>00:31:52</td>
+		</tr>
+	</tbody>
+</table>
 					</div>
 				</section>
 
-			<!-- Three -->
-				<section id="three" class="wrapper style1">
-					<div class="container">
-						<header class="major special">
-							<h2>Mauris vulputate dolor</h2>
-							<p>Feugiat sed lorem ipsum magna</p>
-						</header>
-						<div class="feature-grid">
-							<div class="feature">
-								<div class="image rounded"><img src="images/pic04.jpg" alt="" /></div>
-								<div class="content">
-									<header>
-										<h4>Lorem ipsum</h4>
-										<p>Lorem ipsum dolor sit</p>
-									</header>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore esse tenetur accusantium porro omnis, unde mollitia totam sit nesciunt consectetur.</p>
-								</div>
-							</div>
-							<div class="feature">
-								<div class="image rounded"><img src="images/pic05.jpg" alt="" /></div>
-								<div class="content">
-									<header>
-										<h4>Recusandae nemo</h4>
-										<p>Ratione maiores a, commodi</p>
-									</header>
-									<p>Animi mollitia optio culpa expedita. Dolorem alias minima culpa repellat. Dolores, fuga maiores ut obcaecati blanditiis, at aperiam doloremque.</p>
-								</div>
-							</div>
-							<div class="feature">
-								<div class="image rounded"><img src="images/pic06.jpg" alt="" /></div>
-								<div class="content">
-									<header>
-										<h4>Laudantium fugit</h4>
-										<p>Possimus ex reprehenderit eaque</p>
-									</header>
-									<p>Maiores iusto inventore fugit architecto est iste expedita commodi sed, quasi feugiat nam neque mollitia vitae omnis, ea natus facere.</p>
-								</div>
-							</div>
-							<div class="feature">
-								<div class="image rounded"><img src="images/pic07.jpg" alt="" /></div>
-								<div class="content">
-									<header>
-										<h4>Porro aliquam</h4>
-										<p>Quaerat, excepturi eveniet laboriosam</p>
-									</header>
-									<p>Vitae earum unde, autem labore voluptas ex, iste dolorum inventore natus consequatur iure similique obcaecati aut corporis hic in! Porro sed.</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-
-			<!-- Four -->
-				<section id="four" class="wrapper style3 special">
-					<div class="container">
-						<header class="major">
-							<h2>Aenean elementum ligula</h2>
-							<p>Feugiat sed lorem ipsum magna</p>
-						</header>
-						<ul class="actions">
-							<li><a href="#" class="button special big">Get in touch</a></li>
-						</ul>
-					</div>
-				</section>
+        <!-- Four -->
+  				<section id="four" class="wrapper style3 special">
+  					<div class="container">
+  						<header class="major" id = "BBVA">
+                <p>Reto propuesto por:</p>
+  							<h2>BBVA BANCOMER</h2>
+  						</header>
+  					</div>
+  				</section>
 
 		<!-- Footer -->
 			<footer id="footer">
 				<div class="container">
 					<ul class="icons">
-						<li><a href="#" class="icon fa-facebook"></a></li>
-						<li><a href="#" class="icon fa-twitter"></a></li>
-						<li><a href="#" class="icon fa-instagram"></a></li>
+						<li><a href="#" class="icon fa-coffee"></a></li>
+						<li><a href="https://github.com/emiliano-carrillo/Marveen" target="_blank" class="icon fa-github"></a></li>
+						<li><a href="#" id = "pizza" class="icon material-icons">local_pizza</a></li>
 					</ul>
 					<ul class="copyright">
 						<li>&copy; The Turing Machines</li>
@@ -244,27 +220,11 @@
 			</footer>
 
 		<!-- Scripts -->
+      <script src="assets/js/map.js"></script>
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
 	</body>
-=======
-  <head>
-    <meta charset="utf-8">
-    <title>Marveen</title>
-  </head>
-  <body>
-    <h1>Marveen</h1>
-    <header>
-    	<ul>
-    		<li>Angek</li>
-    		<li>Emi</li>
-    		<li>Omar</li>
-    		<li>Luis</li>
-    	</ul>
-    </header>
-  </body>
->>>>>>> f28747430fb28d5612ec30c1197b0c32e7727cce
 </html>
