@@ -52,60 +52,6 @@
 					</div>
 				</section>
 
-      <!-- Three -->
-      <!--
-  				<section id="three" class="wrapper style1">
-  					<div class="container">
-  						<header class="major special">
-  							<h2>Características:</h2>
-  							<p>Te volverás un experto en solucionar las demandas de tus clientes</p>
-  						</header>
-  						<div class="feature-grid">
-  							<div class="feature">
-  								<div class="image rounded"><img src="images/pic04.jpg" alt="" /></div>
-  								<div class="content">
-  									<header>
-  										<h4>Lorem ipsum</h4>
-  										<p>Lorem ipsum dolor sit</p>
-  									</header>
-  									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore esse tenetur accusantium porro omnis, unde mollitia totam sit nesciunt consectetur.</p>
-  								</div>
-  							</div>
-  							<div class="feature">
-  								<div class="image rounded"><img src="images/pic05.jpg" alt="" /></div>
-  								<div class="content">
-  									<header>
-  										<h4>Recusandae nemo</h4>
-  										<p>Ratione maiores a, commodi</p>
-  									</header>
-  									<p>Animi mollitia optio culpa expedita. Dolorem alias minima culpa repellat. Dolores, fuga maiores ut obcaecati blanditiis, at aperiam doloremque.</p>
-  								</div>
-  							</div>
-  							<div class="feature">
-  								<div class="image rounded"><img src="images/pic06.jpg" alt="" /></div>
-  								<div class="content">
-  									<header>
-  										<h4>Laudantium fugit</h4>
-  										<p>Possimus ex reprehenderit eaque</p>
-  									</header>
-  									<p>Maiores iusto inventore fugit architecto est iste expedita commodi sed, quasi feugiat nam neque mollitia vitae omnis, ea natus facere.</p>
-  								</div>
-  							</div>
-  							<div class="feature">
-  								<div class="image rounded"><img src="images/pic07.jpg" alt="" /></div>
-  								<div class="content">
-  									<header>
-  										<h4>Porro aliquam</h4>
-  										<p>Quaerat, excepturi eveniet laboriosam</p>
-  									</header>
-  									<p>Vitae earum unde, autem labore voluptas ex, iste dolorum inventore natus consequatur iure similique obcaecati aut corporis hic in! Porro sed.</p>
-  								</div>
-  							</div>
-  						</div>
-  					</div>
-  				</section> -->
-
-
 			<!-- Two -->
 				<section id="two" class="wrapper style2 special">
 					<div class="container">
@@ -113,24 +59,58 @@
 							<h2>Mapa de Calor</h2>
 							<p>Encuentra los lugares con mayor actividad</p>
 						</header>
-						<div class="row 150%">
-							<div class="6u 12u$(xsmall)">
-								<div class="image fit captioned">
-									<img src="images/pic02.jpg" alt="" />
-									<h3>Lorem ipsum dolor sit amet.</h3>
-								</div>
-							</div>
-							<div class="6u$ 12u$(xsmall)">
-								<div class="image fit captioned">
-									<img src="images/pic03.jpg" alt="" />
-									<h3>Illum, maiores tempora cupid?</h3>
-								</div>
-							</div>
-						</div>
-						<ul class="actions">
-							<li><a href="#" class="button special big">Nulla luctus</a></li>
-							<li><a href="#" class="button big">Sed vulputate</a></li>
-						</ul>
+              <div id="map"></div>
+              <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAE-QydAvrtD9OwHVDkQDARf8WoUxOG9OY&libraries=visualization&callback=initMap" async defer></script>
+
+
+<table class="container" class = "tablitas">
+	<thead>
+		<tr>
+			<th><h1>Usuario</h1></th>
+			<th><h1>Categoría</h1></th>
+			<th><h1>Ubicación</h1></th>
+			<th><h1>Texto</h1></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Google</td>
+			<td>9518</td>
+			<td>6369</td>
+			<td>01:32:50</td>
+		</tr>
+		<tr>
+			<td>Twitter</td>
+			<td>7326</td>
+			<td>10437</td>
+			<td>00:51:22</td>
+		</tr>
+		<tr>
+			<td>Amazon</td>
+			<td>4162</td>
+			<td>5327</td>
+			<td>00:24:34</td>
+		</tr>
+    <tr>
+			<td>LinkedIn</td>
+			<td>3654</td>
+			<td>2961</td>
+			<td>00:12:10</td>
+		</tr>
+    <tr>
+			<td>CodePen</td>
+			<td>2002</td>
+			<td>4135</td>
+			<td>00:46:19</td>
+		</tr>
+    <tr>
+			<td>GitHub</td>
+			<td>4623</td>
+			<td>3486</td>
+			<td>00:31:52</td>
+		</tr>
+	</tbody>
+</table>
 					</div>
 				</section>
 
@@ -161,6 +141,7 @@
 			</footer>
 
 		<!-- Scripts -->
+      <script src="assets/js/map.js"></script>
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
